@@ -35,7 +35,7 @@
 # just in case
 - name: nginx | remove default config
   become: true
-  copy:
+  ansible.builtin.copy:
     content: "# This file is intentionally blank (Ansible)"
     dest: /etc/nginx/conf.d/{{ item }}
     mode: 0644

@@ -16,7 +16,7 @@
 
 - name: nginx | configure logrotate
   become: true
-  template:
+  ansible.builtin.template:
     backup: false
     dest: /etc/logrotate.d/nginx
     src: logrotated-nginx.j2
