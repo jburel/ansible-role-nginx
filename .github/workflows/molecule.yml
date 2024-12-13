@@ -53,4 +53,3 @@ jobs:
         with:
           galaxy_api_key: ${{ secrets.GALAXY_API_KEY }}
           galaxy_version: ${{  github.ref_name }}
-

@@ -34,7 +34,7 @@ platforms:
     tmpfs:
       - /sys/fs/cgroup
     groups:
-        - extra_options
+      - extra_options
 provisioner:
   name: ansible
   playbooks:
