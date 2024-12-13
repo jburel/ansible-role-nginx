@@ -1,4 +1,11 @@
 ---
+- name: system packages | remove nginx
+  become: true
+  ansible.builtin.apt:
+    name: nginx
+    state: absent
+  when: nginx_remove
+
 - name: system packages | install nginx
   become: true
   ansible.builtin.apt:

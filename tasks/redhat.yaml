@@ -23,6 +23,14 @@
     state: present
   when: nginx_version
 
+- name: system packages | remove nginx
+  become: true
+  ansible.builtin.dnf:
+    name: >-
+      nginx
+    state: absent
+  when: nginx_remove
+
 - name: system packages | install nginx
   become: true
   ansible.builtin.dnf:
